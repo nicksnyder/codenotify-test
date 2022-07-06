@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     name: codenotify
     permissions:
-      issues: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: sourcegraph/codenotify@v0.6.2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CODENOTIFY_GITHUB_TOKEN }}
