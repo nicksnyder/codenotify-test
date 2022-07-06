@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: codenotify
     permissions:
-      issues: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
         with:
